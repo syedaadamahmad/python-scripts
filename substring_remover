@@ -1,0 +1,19 @@
+#removes substrings
+
+import os
+
+def rename_files(folder_path, substring):
+    for filename in os.listdir(folder_path):
+        if filename.startswith("XC"):
+            # Remove the specified substring from the filename
+            new_filename = filename.replace(substring, "")
+            
+            # Rename the file
+            old_path = os.path.join(folder_path, filename)
+            new_path = os.path.join(folder_path, new_filename)
+            os.rename(old_path, new_path)
+            print(f"Renamed {filename} to {new_filename}")
+
+folder_path = r"C:\Users\newbr\OneDrive\Desktop\B_model_87\H_list_87_desktop\OrientalMagpie-Robin"
+substring_to_remove = " Magpie"
+rename_files(folder_path, substring_to_remove)
