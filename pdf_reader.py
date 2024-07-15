@@ -1,7 +1,7 @@
 import PyPDF2
 
 # Path to the uploaded PDF file
-pdf_path = "add path"
+pdf_path = "/mnt/data/IB_19_6_KichlooETAL_JandK_Checklist.pdf"
 
 # Extracting text from the PDF
 def extract_text_from_pdf(pdf_path):
